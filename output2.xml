@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<response state="ok">
+    <status>processed</status>
+    <url><![CDATA[http://www.cafeconleche.org/books/xmljava/chapters/ch03s05.html]]></url>
+    <report_url><![CDATA[http://wepawet.cs.ucsb.edu/view.php?type=js&hash=8cab82675169e30c93fdafe347250d35&t=1291160332]]></report_url>
+    <result>benign</result>
+</response>

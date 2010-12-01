@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<response state="fail">
+    <error code="input" message="missing url or file" />
+</response>
