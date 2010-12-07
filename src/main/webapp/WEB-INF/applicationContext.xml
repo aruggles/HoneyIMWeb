@@ -23,7 +23,7 @@
         <property name="jpaProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
-                <!-- <prop key="hibernate.hbm2ddl.auto">create</prop>  -->
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
             </props>
         </property>
     </bean>
@@ -31,7 +31,7 @@
     <bean id="dataSource"
         class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://192.168.56.136/honeypot" />
+        <property name="url" value="jdbc:mysql://localhost/honeypot" />
         <property name="username" value="webuser" />
         <property name="password" value="secret" />
     </bean>
@@ -58,18 +58,16 @@
 	<bean id="queueJob" class="org.springframework.scheduling.timer.ScheduledTimerTask">
 	  <!-- wait 10 seconds before starting repeated execution -->
 	  <property name="delay" value="10000"/>
-	  <!-- run every 2 minutes -->
-	  <!-- <property name="period" value="120000"/> -->
-	  <property name="period" value="3600000" />
+	  <!-- run every 30 seconds -->
+	  <property name="period" value="30000"/>
 	  <property name="timerTask" ref="queueTask"/>
 	</bean>
 	
 	<bean id="wepawetJob" class="org.springframework.scheduling.timer.ScheduledTimerTask">
 	  <!-- wait 10 seconds before starting repeated execution -->
-	  <property name="delay" value="30000"/>
-	  <!-- run every 2 minutes -->
-	  <!-- <property name="period" value="120000"/> -->
-	  <property name="period" value="3600000" />
+	  <property name="delay" value="40000"/>
+	  <!-- run every 30 seconds -->
+	  <property name="period" value="30000"/>
 	  <property name="timerTask" ref="wepawetTask"/>
 	</bean>
 	
