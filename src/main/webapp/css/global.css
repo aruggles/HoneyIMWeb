@@ -1,0 +1,49 @@
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #FDFCF1 url(../img/body.png) repeat-x 50% 0px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #000000;
+}
+.oneColFixCtrHdr #container {
+	width: 780px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColFixCtrHdr #header {
+	padding: 30px 10px 30px 20px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+}
+.oneColFixCtrHdr #header h1 {
+	font-size: 1.5em;
+	font-weight: normal;
+	color: white;
+	text-shadow: #DCE935 0px 1px 3px;
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+.oneColFixCtrHdr #mainContent {
+	padding: 10px 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	margin-top: 20px;
+	border: 1px solid #e5e5da;
+	background: white;
+	
+}
+.oneColFixCtrHdr #footer {
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+}
+.oneColFixCtrHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+.oneColFixCtrHdr table {
+	width: 100%;
+	border-collapse:collapse;
+}
+.oneColFixCtrHdr th {
+	background-color: #cccbc2; 
+}
+.oneColFixCtrHdr th, .oneColFixCtrHdr td {
+	border: 1px solid #999891;
+	padding: 5px;
+}

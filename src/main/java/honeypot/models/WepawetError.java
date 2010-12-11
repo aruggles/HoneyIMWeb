@@ -16,6 +16,7 @@
 package honeypot.models;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -34,6 +35,7 @@ import javax.persistence.Table;
 public class WepawetError implements Serializable {
 	private static final long serialVersionUID = 5394675846571789826L;
 	private String code;
+	private Date created;
 	@Id
     @GeneratedValue
 	private Integer id;
@@ -44,6 +46,13 @@ public class WepawetError implements Serializable {
 	 */
 	public String getCode() {
 		return code;
+	}
+	/**
+	 * Returns created.
+	 * @return the created.
+	 */
+	public Date getCreated() {
+		return created;
 	}
 	/**
 	 * Returns id.
@@ -65,6 +74,13 @@ public class WepawetError implements Serializable {
 	 */
 	public void setCode(String code) {
 		this.code = code;
+	}
+	/**
+	 * Sets created.
+	 * @param created the created to set.
+	 */
+	public void setCreated(Date created) {
+		this.created = created;
 	}
 	/**
 	 * Sets id.

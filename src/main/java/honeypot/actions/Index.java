@@ -1,24 +1,49 @@
 package honeypot.actions;
 
+import honeypot.models.Status;
+import honeypot.services.WepawetService;
+
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.convention.annotation.Result;
-import org.apache.struts2.convention.annotation.Results;
 
-@Results({
-        @Result(name = Action.SUCCESS, location = "${redirectName}", type = "redirectAction")
-})
 public class Index extends ActionSupport {
+	/**
+	 * Serial Version UID.
+	 */
+	private static final long serialVersionUID = 3406722313955012543L;
+	/**
+	 * The Wepawet Service.
+	 */
+	private WepawetService wepawetService;
+	/**
+	 * The wepawet status object.
+	 */
+	private Status wepawetStatus;
 
-    private String redirectName;
-
+	/**
+	 * Retrieves the service status.
+	 * {@inheritDoc}
+	 * @see com.opensymphony.xwork2.ActionSupport#execute()
+	 */
     public String execute() {
-        redirectName = "hello";
+    	wepawetStatus = wepawetService.getStatus();
         return Action.SUCCESS;
     }
 
-    public String getRedirectName() {
-        return redirectName;
-    }
+	/**
+	 * Returns wepawetStatus.
+	 * @return the wepawetStatus.
+	 */
+	public Status getWepawetStatus() {
+		return wepawetStatus;
+	}
+
+	/**
+	 * Sets wepawetService.
+	 * @param wepawetService the wepawetService to set.
+	 */
+	public void setWepawetService(WepawetService wepawetService) {
+		this.wepawetService = wepawetService;
+	}
 
 }

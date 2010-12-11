@@ -15,7 +15,6 @@
  */
 package honeypot.tasks;
 
-import honeypot.models.Buffer;
 import honeypot.models.WepawetProcessing;
 import honeypot.services.WepawetService;
 

@@ -16,6 +16,7 @@
 package honeypot.models;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,24 +34,25 @@ import javax.persistence.Table;
 @Table(name="wepawet_results")
 public class WepawetResult implements Serializable {
 	private static final long serialVersionUID = -5500757628232109259L;
+	private Date created;
 	@Id
     @GeneratedValue
 	private Integer id;
 	private String report;
 	private String result;
 	/**
+	 * Returns created.
+	 * @return the created.
+	 */
+	public Date getCreated() {
+		return created;
+	}
+	/**
 	 * Returns id.
 	 * @return the id.
 	 */
 	public Integer getId() {
 		return id;
-	}
-	/**
-	 * Sets id.
-	 * @param id the id to set.
-	 */
-	public void setId(Integer id) {
-		this.id = id;
 	}
 	/**
 	 * Returns report.
@@ -60,18 +62,32 @@ public class WepawetResult implements Serializable {
 		return report;
 	}
 	/**
-	 * Sets report.
-	 * @param report the report to set.
-	 */
-	public void setReport(String report) {
-		this.report = report;
-	}
-	/**
 	 * Returns result.
 	 * @return the result.
 	 */
 	public String getResult() {
 		return result;
+	}
+	/**
+	 * Sets created.
+	 * @param created the created to set.
+	 */
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+	/**
+	 * Sets id.
+	 * @param id the id to set.
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	/**
+	 * Sets report.
+	 * @param report the report to set.
+	 */
+	public void setReport(String report) {
+		this.report = report;
 	}
 	/**
 	 * Sets result.

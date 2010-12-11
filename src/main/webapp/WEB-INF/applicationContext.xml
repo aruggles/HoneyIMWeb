@@ -31,7 +31,7 @@
     <bean id="dataSource"
         class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost/honeypot" />
+        <property name="url" value="jdbc:mysql://192.168.187.128/honeypot" />
         <property name="username" value="webuser" />
         <property name="password" value="secret" />
     </bean>
@@ -41,6 +41,11 @@
     </bean>
 
     <tx:annotation-driven transaction-manager="transactionManager" />
+    
+    <!-- Actions -->
+    <bean id="index" class="honeypot.actions.Index">
+    	<property name="wepawetService" ref="wepawetService" />
+    </bean>
     
     <!-- Services -->
     <bean id="wepawetService" class="honeypot.services.WepawetServiceImpl" />

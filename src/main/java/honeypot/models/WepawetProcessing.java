@@ -16,6 +16,7 @@
 package honeypot.models;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,24 +34,18 @@ import javax.persistence.Table;
 @Table(name="wepawet_processing")
 public class WepawetProcessing implements Serializable {
 	private static final long serialVersionUID = 1371372989284142210L;
+	private Date created;
+	private String hash;
 	@Id
     @GeneratedValue
 	private Integer id;
-	private String hash;
 	private String status;
 	/**
-	 * Returns id.
-	 * @return the id.
+	 * Returns created.
+	 * @return the created.
 	 */
-	public Integer getId() {
-		return id;
-	}
-	/**
-	 * Sets id.
-	 * @param id the id to set.
-	 */
-	public void setId(Integer id) {
-		this.id = id;
+	public Date getCreated() {
+		return created;
 	}
 	/**
 	 * Returns hash.
@@ -60,11 +55,11 @@ public class WepawetProcessing implements Serializable {
 		return hash;
 	}
 	/**
-	 * Sets hash.
-	 * @param hash the hash to set.
+	 * Returns id.
+	 * @return the id.
 	 */
-	public void setHash(String hash) {
-		this.hash = hash;
+	public Integer getId() {
+		return id;
 	}
 	/**
 	 * Returns status.
@@ -72,6 +67,27 @@ public class WepawetProcessing implements Serializable {
 	 */
 	public String getStatus() {
 		return status;
+	}
+	/**
+	 * Sets created.
+	 * @param created the created to set.
+	 */
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+	/**
+	 * Sets hash.
+	 * @param hash the hash to set.
+	 */
+	public void setHash(String hash) {
+		this.hash = hash;
+	}
+	/**
+	 * Sets id.
+	 * @param id the id to set.
+	 */
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	/**
 	 * Sets status.

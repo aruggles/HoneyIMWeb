@@ -15,6 +15,13 @@
  */
 package honeypot.services;
 
+import java.util.List;
+
+import honeypot.models.Status;
+import honeypot.models.WepawetError;
+import honeypot.models.WepawetProcessing;
+import honeypot.models.WepawetResult;
+
 /**
  * TODO comment
  * @author Adam
@@ -26,4 +33,8 @@ public interface WepawetService {
 
 	void process(String message);
 	void checkQueue(String hash);
+	Status getStatus();
+	List<WepawetError> getErrors();
+	List<WepawetProcessing> getProcessing();
+	List<WepawetResult> getResults();
 }
