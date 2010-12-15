@@ -38,9 +38,9 @@
 					<s:iterator value="resultList">
 					<tbody>
 						<tr>
-							<td><s:property value="result" /></td>
-							<td><s:date name="created" /></td>
-							<td><a href="<s:property value="report" />"><s:property value="report" /></a></td>
+							<td style="width: 10%;"><s:property value="result" /></td>
+							<td style="width: 40%;"><s:date name="created" /></td>
+							<td style="width: 50%;"><a href="<s:property value="report" />"><s:property value="report" /></a></td>
 						</tr>
 					</tbody>
 					</s:iterator>
